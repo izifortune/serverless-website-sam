@@ -98,7 +98,7 @@ Resources:
   Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: <YOURSWEBSITE.COM>-sam
+      BucketName: <YOURSWEBSITE.COM>
 
   BucketPolicy:
     Type: AWS::S3::BucketPolicy
