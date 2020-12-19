@@ -128,7 +128,7 @@ Resources:
       Type: A
       AliasTarget:
         DNSName: !GetAtt WebsiteCloudfrontDistribution.DomainName
-        HostedZoneId: Z2FDTNDATAQYW2
+        HostedZoneId: !Ref HostedZone
   RecordAAAA:
     Type: AWS::Route53::RecordSet
     DependsOn: WebsiteCloudfrontDistribution
@@ -138,7 +138,7 @@ Resources:
       Type: AAAA
       AliasTarget:
         DNSName: !GetAtt WebsiteCloudfrontDistribution.DomainName
-        HostedZoneId: Z2FDTNDATAQYW2
+        HostedZoneId: !Ref HostedZone
   RecordWWWA:
     Type: AWS::Route53::RecordSet
     DependsOn: WebsiteCloudfrontDistribution
@@ -148,7 +148,7 @@ Resources:
       Type: A
       AliasTarget:
         DNSName: !GetAtt WebsiteCloudfrontDistribution.DomainName
-        HostedZoneId: Z2FDTNDATAQYW2
+        HostedZoneId: !Ref HostedZone
   RecordWWWAAAA:
     Type: AWS::Route53::RecordSet
     DependsOn: WebsiteCloudfrontDistribution
@@ -158,4 +158,4 @@ Resources:
       Type: AAAA
       AliasTarget:
         DNSName: !GetAtt WebsiteCloudfrontDistribution.DomainName
-        HostedZoneId: Z2FDTNDATAQYW2
+        HostedZoneId: !Ref HostedZone
